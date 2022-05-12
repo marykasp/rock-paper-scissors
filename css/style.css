@@ -90,8 +90,32 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
+.btn i {
+  pointer-events: none;
+}
+
 .btn:hover {
   color: #e14a67;
   border-color: #fff;
   background-color: #34495e;
+}
+
+.challenge {
+  width: 90%;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+#you, #com, #result {
+  flex: 0 0 33%;
+  width: 33%;
+  text-align: center;
+}
+
+.challenge .user-object,
+.challenge .computer-object {
+  font-size: 50px;
 }

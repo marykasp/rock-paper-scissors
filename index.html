@@ -26,12 +26,35 @@
         <span class="computer">COMPUTER</span>
       </div>
       <div class="buttons">
-        <button class="btn" onclick="" value="">
+        <button class="btn" onclick="game(this.value)" value="paper">
           <i class="fa-solid fa-hand"></i>
         </button>
-        <button class="btn"><i class="fa-solid fa-hand-back-fist"></i></button>
-        <button class="btn"><i class="fa-solid fa-hand-scissors"></i></button>
+        <button class="btn" onclick="game(this.value)" value="rock">
+          <i class="fa-solid fa-hand-back-fist"></i>
+        </button>
+        <button class="btn" onclick="game(this.value)" value="scissors">
+          <i class="fa-solid fa-hand-scissors"></i>
+        </button>
+      </div>
+      <div class="challenge">
+        <div id="you">
+          <div class="user-object">
+            <i class="fa-solid fa-hand"></i>
+          </div>
+        </div>
+
+        <div id="result">
+          <p>You win!</p>
+        </div>
+
+        <div id="com">
+          <div class="computer-object">
+            <i class="fa-solid fa-hand-back-fist"></i>
+          </div>
+        </div>
       </div>
     </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
