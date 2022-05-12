@@ -15,20 +15,23 @@ function score() {
   scoreDiv.innerHTML = `${userScore} - ${computerScore}`
 }
 
-setInterval(score, 50)
+setInterval(score, 50);
+
+function convert(word) {
+  if(word === 'rock') return '<i class="fa-solid fa-hand-back-fist"></i>';
+  if(word === 'paper') return '<i class="fa-solid fa-hand"></i>'
+  if(word === 'scissors') return '<i class="fa-solid fa-hand-scissors"></i>'
+}
 
 function game(userChoice) {
   let box = document.querySelector(".challenge");
   box.style.display = 'flex';
 
+  // display player choice
   const playerObject = document.querySelector('.user-object');
-  if(userChoice === 'rock') {
-    playerObject.innerHTML = '<i class="fa-solid fa-hand-back-fist"></i>'
-  } else if(userChoice === 'paper') {
-    playerObject.innerHTML = '<i class="fa-solid fa-hand"></i>'
-  } else if(userChoice === 'scissors') {
-    playerObject.innerHTML = '  <i class="fa-solid fa-hand-scissors"></i>'
-  }
+  playerObject.innerHTML = convert(userChoice)
 
-  const computerObject = document.querySelector('.computer-object')
+  // display computer choice
+  const computerObject = document.querySelector('.computer-object');
+  computerObject.innerHTML = convert(computerChoice);
 }
