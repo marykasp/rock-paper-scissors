@@ -7,17 +7,20 @@ let computerChoice = choices[randomIndex];
 let computerPoints = 0;
 let userPoints = 0;
 
-let scoreDiv = document.querySelector("#score");
+const scoreDiv = document.querySelector("#score");
 // let buttons = document.querySelectorAll('.btn');
-let result = document.querySelector("#result");
-const usernameInput = document.querySelector('#username');
-let username = usernameInput.value
-usernameInput.addEventListener("change", e => {
-  username = e.target.value;
-})
-console.log(username)
+const result = document.querySelector("#result");
+const nameInput = document.querySelector('#name')
 
-localStorage.setItem('username', username)
+let username = localStorage.getItem('username') || '';
+
+// Add event listener to name input to change username
+nameInput.addEventListener("change", (e) => {
+  username = e.target.value;
+  // set local storage value
+  localStorage.setItem('username', username)
+})
+
 
 
 function score() {
@@ -37,7 +40,7 @@ function win(btn) {
   // increase userPoints
   userPoints += 1;
   // update result element
-  result.innerHTML = `<p>You win!</p>`
+  result.innerHTML = `<p>${username} wins!</p>`
   // pass in userChoice, use to get id of button to change the class
   let bn = document.querySelector(`#${btn}`);
   bn.classList.remove('btn');
@@ -53,7 +56,7 @@ function lose(btn) {
   // alert('you lose!')
   // increase computerPoints
   computerPoints += 1;
-  result.innerHTML = `<p>You lose...</p>`
+  result.innerHTML = `<p>You lose, ${username}...</p>`
 
   // change the userChoice to red
   let bn = document.querySelector(`#${btn}`);

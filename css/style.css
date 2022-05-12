@@ -3,6 +3,7 @@
 html,
 body {
   height: 100%;
+  width: 1200px;
   background-color: #ecf0f1;
   color: #1c2e4a;
 }
@@ -40,36 +41,36 @@ header h1 {
 
 .container {
   height: 90%;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   padding: 2rem 1.5rem;
   background-color: #ecf0f1;
-  color: #333;
+  color: #313154;
+  margin: 0 auto;
 }
 
 .greeting {
-  font-size: 1.5rem;
-  font-weight: 300;
-  padding: 1rem;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  /* margin: 0 auto;
-  width: 50%; */
-}
-
-.greeting span {
-  display: block;
+  width: 30%;
 }
 
 .greeting input {
-  font-weight: 500;
-  font-size: 24px;
-  width: 55%;
-  color: #e14a67;
+  margin-left: 0.4rem;
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.greeting .title,
+.greeting input {
+  color: #313154;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .score-container {
@@ -77,6 +78,7 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 #score {
@@ -146,15 +148,15 @@ button {
   display: none;
 }
 
-#you, #com, #result {
+#you, #com, #result{
   flex: 0 0 33%;
   width: 33%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-
 
 
 .challenge .user-object,
@@ -184,7 +186,7 @@ button {
 }
 
 #result p {
-  font-size: 2rem;
+  font-size: 25px;
   font-weight: 500;
   color: #e14a67;
 }
