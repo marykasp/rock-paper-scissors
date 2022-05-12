@@ -10,6 +10,14 @@ let userPoints = 0;
 let scoreDiv = document.querySelector("#score");
 // let buttons = document.querySelectorAll('.btn');
 let result = document.querySelector("#result");
+const usernameInput = document.querySelector('#username');
+let username = usernameInput.value
+usernameInput.addEventListener("change", e => {
+  username = e.target.value;
+})
+console.log(username)
+
+localStorage.setItem('username', username)
 
 
 function score() {
