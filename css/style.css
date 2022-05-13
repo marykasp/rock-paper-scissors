@@ -3,7 +3,6 @@
 html,
 body {
   height: 100%;
-  width: 1200px;
   background-color: #ecf0f1;
   color: #1c2e4a;
 }
@@ -19,6 +18,7 @@ header {
   width: 100%;
   padding: 2rem 0;
   padding-top: 25px;
+  text-align: center;
 }
 
 input[type="text"] {
@@ -34,41 +34,48 @@ input[type="text"] {
 
 header h1 {
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   font-size: 2rem;
   font-weight: 500;
 }
 
 .container {
   height: 90%;
-  max-width: 800px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: flex-start;
   align-items: center;
   padding: 2rem 1.5rem;
   background-color: #ecf0f1;
   color: #313154;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .greeting {
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 350px;
+  padding: 1rem;
+  border: 1px dotted #313154;
+  border-radius: 5px;
+  margin-bottom: 2.5rem;
+}
+
+.greeting h2 {
+  margin-left: 3rem;
+  text-align: center;
+  color: #313154;
 }
 
 .greeting input {
   margin-left: 0.4rem;
-  flex: 1 1 0%;
-  min-width: 0;
+  flex-basis: 100%;
+  color: #e14a67;
 }
 
 .greeting .title,
 .greeting input {
-  color: #313154;
   font-size: 1.5rem;
   font-weight: 700;
 }
